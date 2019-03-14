@@ -1,7 +1,9 @@
 fileFormatVersion: 2
 guid: db5012582b7473b43a99cffcb1403a0b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: M-6_strip2_0
+    21300002: M-6_strip2_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,7 +52,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -69,10 +71,75 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: M-6_strip2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 109
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1a741556b87dc4d8ca766f080ca679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M-6_strip2_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 79
+        height: 171
+      alignment: 9
+      pivot: {x: 0.48140863, y: 0.67343783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fd2d71d9f03d647ae02c7c3ce1b236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 25, y: 38}
+      - {x: 15, y: 36}
+      - {x: 15, y: -91}
+      - {x: 26, y: -135}
+      - {x: 65, y: -135}
+      - {x: 98, y: -24}
+      - {x: 98, y: 26}
+      - {x: 92, y: 38}
+    - - {x: -109, y: 135}
+      - {x: -109, y: -111}
+      - {x: -3, y: -111}
+      - {x: 2, y: -108}
+      - {x: 2, y: 128}
+      - {x: -14, y: 135}
     physicsShape: []
     bones: []
     spriteID: 0da08e5b3bbc44c4c9d2cc17fd2c1cf4
