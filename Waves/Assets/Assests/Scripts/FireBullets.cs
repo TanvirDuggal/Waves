@@ -28,7 +28,7 @@ public class FireBullets : MonoBehaviour
             moveBullet = false;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             moveBullet = true;
 

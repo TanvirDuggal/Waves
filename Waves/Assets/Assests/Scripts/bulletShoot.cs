@@ -26,6 +26,6 @@ public class bulletShoot : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        print(collision.gameObject.tag);
+     //   print("collided");
     }
 }
