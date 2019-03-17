@@ -11,9 +11,7 @@ public class bulletShoot : MonoBehaviour
     {
         
     }
-    
 
-    
 
     void Update()
     {
