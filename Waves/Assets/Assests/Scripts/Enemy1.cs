@@ -26,6 +26,9 @@ public class Enemy1 : MonoBehaviour
     void Start()
     {
         sceneID = SceneManager.GetActiveScene().buildIndex;
+        InvokeRepeating("fire",5.0f, 0.5f);
+        CancelInvoke("fire");
+        InvokeRepeating("fire", 2.0f, 0.1f);
        // print(sceneID);
     }
     float timeee;
@@ -90,10 +93,12 @@ public class Enemy1 : MonoBehaviour
         
         timee += Time.deltaTime;
         
+        /*
         if (isEven(timee.ToString()))
         {
             fire();
         }
+        */
         
     }
 
