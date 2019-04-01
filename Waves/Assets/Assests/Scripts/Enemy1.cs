@@ -15,6 +15,7 @@ public class Enemy1 : MonoBehaviour
 
     public float fireTime = 2.0f;
 
+    public GameController gamCon;
   
     public GameObject rocketPrefab;
     public Transform barrelEnd;
@@ -26,10 +27,12 @@ public class Enemy1 : MonoBehaviour
     void Start()
     {
         sceneID = SceneManager.GetActiveScene().buildIndex;
-        InvokeRepeating("fire",5.0f, 0.5f);
-        CancelInvoke("fire");
-        InvokeRepeating("fire", 2.0f, 0.1f);
-       // print(sceneID);
+        InvokeRepeating("fire",1.0f, 0.8f);
+      //  CancelInvoke("fire");
+      //  InvokeRepeating("fire", 2.0f, 0.1f);
+        // print(sceneID);
+
+        InvokeRepeating("SpawnObject", 2, 1);
     }
     float timeee;
     private void fire()
@@ -44,8 +47,8 @@ public class Enemy1 : MonoBehaviour
     {
         Quaternion loc = transform.rotation;
        // loc = Quaternion.Inverse(loc);
-        transform.rotation = Quaternion.Lerp(loc, player.transform.rotation, Time.deltaTime * speed);
-        
+          transform.rotation = Quaternion.Lerp(loc, player.transform.rotation, Time.deltaTime * speed);
+  //      transform.LookAt(player.tr);
       //  gameObject.transform.LookAt(player.transform.position);
     }
     float timee;
@@ -113,7 +116,8 @@ public class Enemy1 : MonoBehaviour
             if (health <= 0)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene(sceneID+1, LoadSceneMode.Single);
+                // SceneManager.LoadScene(sceneID+1, LoadSceneMode.Single);
+                gamCon.hitTaken();
             }
         }
         

@@ -5,19 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class UIscript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void startButtonScene()
     {
-        
+        SceneManager.LoadScene("TankScene", LoadSceneMode.Single);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void settingButtonScene()
     {
-        
+        SceneManager.LoadScene("SettingScene", LoadSceneMode.Single);
     }
 
-    public void chngScene()
+    public void backStartButtonScene()
+    {
+        SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
+    }
+
+    public void loadStartScene()
+    {
+        SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
+    }
+
+    public void loadLevel1cene()
     {
         SceneManager.LoadScene("Sc_1", LoadSceneMode.Single);
     }

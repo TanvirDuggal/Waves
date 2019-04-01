@@ -20,7 +20,7 @@ public class bulletShoot : MonoBehaviour
 
     private void FixedUpdate()
     {
-     transform.position += -transform.up * Time.deltaTime * speed;
+     transform.position += transform.up * Time.deltaTime * speed;
         
     }
 
