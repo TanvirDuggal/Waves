@@ -27,7 +27,7 @@ public class Enemy1 : MonoBehaviour
     void Start()
     {
         sceneID = SceneManager.GetActiveScene().buildIndex;
-        InvokeRepeating("fire",1.0f, 0.8f);
+        InvokeRepeating("fire",1.0f, 2.0f);
       //  CancelInvoke("fire");
       //  InvokeRepeating("fire", 2.0f, 0.1f);
         // print(sceneID);
@@ -45,10 +45,17 @@ public class Enemy1 : MonoBehaviour
 
     public void rot()
     {
-        Quaternion loc = transform.rotation;
+        Vector3 diff = player.transform.position - gameObject.transform.position;
+        diff.Normalize();
+
+        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+
+        //Quaternion loc = transform.rotation;
        // loc = Quaternion.Inverse(loc);
-          transform.rotation = Quaternion.Lerp(loc, player.transform.rotation, Time.deltaTime * speed);
-  //      transform.LookAt(player.tr);
+          //transform.rotation = Quaternion.Lerp(loc, player.transform.rotation, Time.deltaTime * speed);
+        //transform.LookAt(player.transform);
       //  gameObject.transform.LookAt(player.transform.position);
     }
     float timee;
