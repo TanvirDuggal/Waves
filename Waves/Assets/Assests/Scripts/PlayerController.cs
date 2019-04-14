@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,9 +14,12 @@ public class PlayerController : MonoBehaviour
 
     public float health = 5.0f;
 
+    public Text healthText;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        healthText.text = "LIFE : " + health.ToString();
     }
 
     private void FixedUpdate()
@@ -37,6 +41,9 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
             int sceneID = SceneManager.GetActiveScene().buildIndex;
             health--;
+
+            healthText.text = "LIFE : " + health.ToString();
+        
             if (health <= 0)
             {
                 Destroy(gameObject);

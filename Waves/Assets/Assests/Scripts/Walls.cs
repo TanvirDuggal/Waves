@@ -13,14 +13,11 @@ public class Walls : MonoBehaviour
     {
         
     }
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "EnemyBullet" || col.gameObject.tag == "bullet")
         {
             Destroy(col.gameObject);
         }
-    //    Debug.Log("GameObject1 collided with " + col.name);
-        
     }
 }
