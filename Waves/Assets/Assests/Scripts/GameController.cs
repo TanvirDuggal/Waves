@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     private int minuteCount;
     private int hourCount;
 
+    public GameObject instructionPanel;
+   
 
     public void UpdateTimerUI()
     {
@@ -32,6 +34,20 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        
+        StartCoroutine(Example());
+        
+    }
+
+    IEnumerator Example()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(4);
+#pragma warning disable CS0618 // Type or member is obsolete
+        instructionPanel.active = false;
+#pragma warning restore CS0618 // Type or member is obsolete
+        
+        print(Time.time);
     }
 
     public void hitTaken()
