@@ -112,9 +112,9 @@ public class Enemy1 : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        //  Debug.Log("GameObject1 collided with " + col.name);
+        Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>> GameObject1 collided with " + col.gameObject.tag);
         if (col.gameObject.tag == "bullet")
         {
             Destroy(col.gameObject);

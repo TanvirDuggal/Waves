@@ -23,8 +23,12 @@ public class PlayerBullet : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        //   print("collided");
+        if (collision.collider.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

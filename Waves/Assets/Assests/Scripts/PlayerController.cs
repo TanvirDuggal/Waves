@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         //  Debug.Log("GameObject1 collided with " + col.name);
         if (col.gameObject.tag == "EnemyBullet")

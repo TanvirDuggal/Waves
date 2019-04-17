@@ -13,8 +13,10 @@ public class Walls : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
+       // Debug.Log("Bullet collided with wall");
+       // Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag == "EnemyBullet" || col.gameObject.tag == "bullet")
         {
             Destroy(col.gameObject);
